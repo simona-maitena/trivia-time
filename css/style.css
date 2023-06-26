@@ -29,8 +29,12 @@ header {
   font-size: 4rem;
 }
 
+.contenerdor-relog {
+  display: grid;
+  place-items: center;
+}
+
 .relog {
-  left: calc(50vw - 120px);
   width: var(--relog-size);
   aspect-ratio: 1;
   background-color: white;
@@ -104,12 +108,10 @@ header {
 
 .hidden {
   display: none;
-  opacity: 0;
 }
 
 .show {
   display: block;
-  opacity: 1;
 }
 
 #input-nombre {
@@ -377,4 +379,24 @@ header {
 
 .resumen-pregunta--incorrecta {
   background-color: var(--btn-red);
+}
+
+@media screen and (width<= 500px) {
+  .btn-login {
+    flex-direction: column;
+  }
+
+  .resultado-img {
+    width: 150px;
+  }
+  .resultado__preguntas {
+    font-size: 1.5rem;
+  }
+
+  .preguntas__total {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
